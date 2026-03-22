@@ -1,187 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nachiyar Engineering Works</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nachiyar Engineering Works | Precision Tectonics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "outline": "#897362",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#e3e2e2",
+              "error-container": "#ffdad6",
+              "surface-dim": "#dadada",
+              "surface-tint": "#904d00",
+              "on-primary-container": "#623200",
+              "on-surface-variant": "#564334",
+              "on-error": "#ffffff",
+              "primary-fixed": "#ffdcc3",
+              "secondary-fixed": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#464747",
+              "surface-container-low": "#f3f3f3",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "secondary-fixed-dim": "#c8c6c5",
+              "outline-variant": "#ddc1ae",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#636262",
+              "on-primary-fixed": "#2f1500",
+              "primary": "#904d00",
+              "secondary": "#5f5e5e",
+              "primary-container": "#ff8c00",
+              "on-primary-fixed-variant": "#6e3900",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container": "#eeeeee",
+              "surface": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "inverse-primary": "#ffb77d",
+              "tertiary-container": "#aaaaaa",
+              "primary-fixed-dim": "#ffb77d",
+              "secondary-container": "#e2dfde",
+              "on-tertiary-fixed": "#1b1c1c",
+              "on-secondary-fixed": "#1c1b1b",
+              "on-background": "#1a1c1c",
+              "inverse-surface": "#2f3131",
+              "on-tertiary-container": "#3e3f3f",
+              "on-secondary-fixed-variant": "#474746",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-bright": "#f9f9f9",
+              "background": "#f9f9f9",
+              "surface-variant": "#e2e2e2",
+              "surface-container-high": "#e8e8e8",
+              "tertiary": "#5e5e5e"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-
-body{background:#f5f5f5;color:#222}
-
-/* HEADER */
-header{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:#fff;
-}
-
-h1{font-size:3rem;font-weight:700}
-.highlight{color:#f57c00}
-
-.tagline{margin-top:10px;color:#555}
-
-.btn{
-  margin-top:15px;
-  padding:12px 25px;
-  border:2px solid #f57c00;
-  color:#f57c00;
-  text-decoration:none;
-  border-radius:5px;
-  display:inline-block;
-  transition:0.3s;
-}
-.btn:hover{background:#f57c00;color:#fff}
-
-/* SECTION */
-section{padding:60px 20px;text-align:center}
-h2{color:#f57c00;margin-bottom:20px}
-
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-}
-
-.card{
-  padding:25px;
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-.card:hover{transform:translateY(-8px)}
-
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-  margin-top:20px;
-}
-.gallery img{
-  width:100%;
-  border-radius:10px;
-  transition:0.3s;
-}
-.gallery img:hover{transform:scale(1.05)}
-
-/* MAP */
-.map{
-  margin-top:20px;
-  border-radius:10px;
-  overflow:hidden;
-}
-
-/* CONTACT LINKS */
-.contact-links a{
-  display:block;
-  margin:10px;
-  font-size:18px;
-  color:#222;
-  text-decoration:none;
-}
-.contact-links a:hover{
-  color:#f57c00;
-}
-
-/* FOOTER */
-footer{
-  padding:20px;
-  text-align:center;
-  background:#222;
-  color:#fff;
-}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px;
-  border-radius:50%;
-  font-size:20px;
-  text-decoration:none;
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header>
-  <h1><span class="highlight">NACHIYAR</span><br>ENGINEERING WORKS</h1>
-  <p class="tagline">Complete Crushing Solutions</p>
-  <a href="#contact" class="btn">Contact Us</a>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .industrial-mask {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      }
+      .animate-bounce-subtle {
+        animation: bounce-subtle 3s infinite ease-in-out;
+      }
+      @keyframes bounce-subtle {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500 text-2xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="text-2xl font-black text-orange-500 tracking-tighter font-headline">NACHIYAR</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-zinc-600 dark:text-zinc-400 font-bold hover:text-orange-500 transition-colors uppercase text-xs tracking-widest" href="#about">About</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-bold hover:text-orange-500 transition-colors uppercase text-xs tracking-widest" href="#services">Services</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-bold hover:text-orange-500 transition-colors uppercase text-xs tracking-widest" href="#gallery">Projects</a>
+<a class="bg-primary-container text-white px-6 py-2 rounded-md font-bold text-xs uppercase tracking-widest active:scale-95 duration-200" href="#contact">Contact Us</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-orange-500" data-icon="menu">menu</span>
+</div>
+</nav>
+<div class="bg-zinc-100 dark:bg-zinc-800 h-[1px] w-full"></div>
 </header>
-
-<!-- ABOUT -->
-<section>
-  <h2>About Us</h2>
-  <p>Nachiyar Engineering Works provides quality welding, fabrication, machine work and erection services with strong work and customer trust.</p>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[707px] flex flex-col justify-center items-start px-6 md:px-24 bg-on-surface overflow-hidden industrial-mask">
+<div class="absolute inset-0 opacity-40">
+<img alt="Heavy machinery fabrication workshop" class="w-full h-full object-cover grayscale" data-alt="Black and white industrial fabrication workshop with steel structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPsNPNkZjJLSa-Ujg4a5P4qfs5XK5g1aymUcbu_udz7XTzk6IZ0Uct6C5BuGUAPg1IKBDotp9w1lN80jRxT0vvfxtEYwDJXNihd6k_ONPXD8tLASaaxGBQombbY0SlCzePzhaYGROUmQgxHufGKR7qtbsu4fq-LhlVBdcvyqv-yoIRebVhwb59ZhdKe6WI8f2LMmxQ6FTScdUvnvacuHa6DZIbwQudCklTYndv2t_AxHhu3RY-TAXaC2QoJj6eNc_FGrIUcsrmyBc"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-on-surface via-on-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<div class="inline-flex items-center gap-2 mb-6">
+<div class="w-12 h-[2px] bg-primary-container"></div>
+<span class="label-md font-bold text-primary-container tracking-[0.2em] uppercase">Engineering Excellence</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-8">
+                    NACHIYAR <span class="text-primary-container">ENGINEERING</span> WORKS
+                </h1>
+<p class="text-xl md:text-2xl text-surface-container-high max-w-2xl font-light mb-10 border-l-4 border-primary-container pl-6">
+                    Crusher Manufacturer | Fabrication &amp; Erection. Precision tectonics applied to heavy industrial infrastructure.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="px-8 py-4 bg-primary-container text-white font-bold text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform flex items-center gap-2" href="#services">
+                        View Services
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border-2 border-white/20 text-white font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-on-surface transition-all" href="tel:9566521104">
+                        Call Now
+                    </a>
+</div>
+</div>
 </section>
-
-<!-- SERVICES -->
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">Welding</div>
-    <div class="card">Fabrication</div>
-    <div class="card">Machine Work</div>
-    <div class="card">Erection Work</div>
-  </div>
+<!-- About Section -->
+<section class="py-24 px-6 md:px-24 bg-surface grid md:grid-cols-2 gap-16 items-center" id="about">
+<div class="space-y-8">
+<h2 class="text-4xl md:text-5xl font-black text-on-surface tracking-tighter uppercase leading-none">
+                    Reliability <br/> In Every <br/> <span class="text-primary-container">Weld</span>
+</h2>
+<div class="w-24 h-1 bg-primary-container"></div>
+<p class="text-lg text-secondary leading-relaxed">
+                    We are a premier crusher manufacturer providing fabrication, welding, machine work, and erection services with quality and reliability. Our approach combines traditional engineering mastery with modern precision.
+                </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="p-6 bg-surface-container-low">
+<span class="text-4xl font-black text-primary-container block mb-2">15+</span>
+<span class="label-md font-bold uppercase tracking-widest text-secondary">Years Experience</span>
+</div>
+<div class="p-6 bg-surface-container-low">
+<span class="text-4xl font-black text-primary-container block mb-2">500+</span>
+<span class="label-md font-bold uppercase tracking-widest text-secondary">Projects Done</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary-container"></div>
+<img alt="Engineering precision work" class="w-full aspect-square object-cover" data-alt="Close up of metal machining and engineering precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsgh8vsYf229N4m6mv5eQG9EDJkp5YIxBjrBBalwKiP9fMaQWF7bUIBVjoIOkoWPLY0WFqlhiOaP12lYjHQk1W6QbzWU1vi6CZg0f683M11mPP-p628-bvuBOMZqTXgTmdwPJuKs0tSZtwBCtoxWfT0W22F6Zc3Rm_MGG94X2RbCA0zHAZnALDtORfwOGAVhAhkgfu-R1Z6iPcWY62AstGXj994lGx3F0_emL1j9ghgSYD7-iGZesabXc3HkmW_UkwYz8rO2LV7Uo"/>
+<div class="absolute -bottom-8 -right-8 bg-on-surface p-8 text-white hidden md:block max-w-[240px]">
+<p class="text-xs uppercase tracking-widest font-bold opacity-60 mb-2">Core Philosophy</p>
+<p class="text-sm italic">"Strength is not just in the steel, but in the precision of the assembly."</p>
+</div>
+</div>
 </section>
-
-<!-- GALLERY -->
-<section>
-  <h2>Our Works</h2>
-  <div class="gallery">
-    <img src="images/work1.jpg" alt="Work 1">
-    <img src="images/work2.jpg" alt="Work 2">
-    <img src="images/work3.jpg" alt="Work 3">
-  </div>
+<!-- Services Section (The Specification Grid) -->
+<section class="py-24 bg-surface-container" id="services">
+<div class="px-6 md:px-24 mb-16">
+<span class="label-md font-black text-primary-container tracking-widest uppercase block mb-4">Our Capabilities</span>
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase">Industrial Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+<!-- Service Card 1 -->
+<div class="group bg-surface-container-lowest border-r border-b border-outline-variant/10 p-10 hover:bg-on-surface hover:text-white transition-all duration-500">
+<div class="flex flex-col h-full">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="settings_input_component">settings_input_component</span>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-4 group-hover:text-primary-container">Crusher Manufacturing</h3>
+<p class="text-secondary group-hover:text-surface-container-high text-sm leading-relaxed mb-8">Heavy-duty crushing units designed for maximum throughput and durability in mining and construction.</p>
+<span class="mt-auto text-xs font-bold tracking-widest uppercase opacity-40">Service ID: 001</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-container-lowest border-r border-b border-outline-variant/10 p-10 hover:bg-on-surface hover:text-white transition-all duration-500">
+<div class="flex flex-col h-full">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="fire_hydrant">fire_hydrant</span>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-4 group-hover:text-primary-container">Welding</h3>
+<p class="text-secondary group-hover:text-surface-container-high text-sm leading-relaxed mb-8">Certified high-pressure welding services for structural components and specialized industrial machinery.</p>
+<span class="mt-auto text-xs font-bold tracking-widest uppercase opacity-40">Service ID: 002</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-container-lowest border-r border-b border-outline-variant/10 p-10 hover:bg-on-surface hover:text-white transition-all duration-500">
+<div class="flex flex-col h-full">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-4 group-hover:text-primary-container">Fabrication</h3>
+<p class="text-secondary group-hover:text-surface-container-high text-sm leading-relaxed mb-8">Custom metal fabrication ranging from small parts to massive structural skeletons for plants.</p>
+<span class="mt-auto text-xs font-bold tracking-widest uppercase opacity-40">Service ID: 003</span>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group bg-surface-container-lowest border-r border-b border-outline-variant/10 p-10 hover:bg-on-surface hover:text-white transition-all duration-500">
+<div class="flex flex-col h-full">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="handyman">handyman</span>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-4 group-hover:text-primary-container">Machine Work</h3>
+<p class="text-secondary group-hover:text-surface-container-high text-sm leading-relaxed mb-8">High-precision turning, milling, and grinding services for custom industrial components.</p>
+<span class="mt-auto text-xs font-bold tracking-widest uppercase opacity-40">Service ID: 004</span>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="group bg-surface-container-lowest border-b border-outline-variant/10 p-10 hover:bg-on-surface hover:text-white transition-all duration-500">
+<div class="flex flex-col h-full">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6" data-icon="architecture">architecture</span>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-4 group-hover:text-primary-container">Erection Work</h3>
+<p class="text-secondary group-hover:text-surface-container-high text-sm leading-relaxed mb-8">On-site plant assembly and machinery erection with rigorous safety and alignment standards.</p>
+<span class="mt-auto text-xs font-bold tracking-widest uppercase opacity-40">Service ID: 005</span>
+</div>
+</div>
+</div>
 </section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-
-  <div class="contact-links">
-    <a href="tel:9566521104">📞 Call: 95665 21104</a>
-    <a href="mailto:nachiyarengineering@gmail.com">📧 Email: nachiyarengineering@gmail.com</a>
-  </div>
-
-  <p>Available for Industrial & Local Projects</p>
-  <p>D No 6/126D, Thottathu Salaikal, Pappampatti, Coimbatore</p>
-
-  <div class="map">
-    <iframe src="https://www.google.com/maps?q=11.0193994,76.966693&z=15&output=embed"
-    width="100%" height="300" style="border:0;"></iframe>
-  </div>
-
-  <a href="https://maps.app.goo.gl/2YJkvQUhhpNBDgDg8" target="_blank" class="btn">
-    Get Directions
-  </a>
+<!-- Gallery Section (Bento Grid Style) -->
+<section class="py-24 px-6 md:px-24" id="gallery">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="label-md font-black text-primary-container tracking-widest uppercase block mb-4">Work Portfolio</span>
+<h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase">Project Gallery</h2>
+</div>
+<div class="text-secondary font-bold text-xs uppercase tracking-widest">
+                    Fabrication | Erection | Maintenance
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[1000px] md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 overflow-hidden group relative">
+<img alt="Crusher Plant Erection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Large scale crusher plant construction on-site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo8vPYk22O4qy8MJIZW3AqE03qWLrKeKIy2HL9vUHogXhr3sBRok_qoj3G0j-iADGPYlrnsl2UymvfWM1sfbzaQLmxx3U04bqY9t5afd9XYeU2PGGP07ukswO9fDooZGKr2iGHUOapXWho-Gern6qIa3DgUqZ_CY0wlUw0pszfo4-R8u1yIgP2sfgLRUVoldwn98VB_MZmVAiK0dDCPAxy45TDmE-u3zWqKYZddkbKq5vcHk5ceoexeQS3Iw4N0vCUGJOONhbwIes"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<span class="text-white font-bold tracking-widest uppercase">Crusher Plant Erection</span>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 overflow-hidden group relative">
+<img alt="Welding Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Precise welding work with sparks flying" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjvBbegXh-3V-I_HPSNXmc1yvTiITRIJ7Q6fPAqJr820OfevS0A-JUEEu0v-hyjcpNIQhxZ_wHXrXqm172Js4uddWVXwNwx49ZTng4xte0XxVmOnhhPrnp4-u9aVI5QWg7iil-VCHM3cAsbUu0Hl1jMEVUgaCaIyeIiFiKomMhQIMIK3RalqU740RqFvZbFyyogPZp2LfE5ikfFxX2He4mYzRGQtgdva6NUopVmZ3myUwijjY-jrBQjCX3bMjioxZotR-sTkLR4go"/>
+</div>
+<div class="md:col-span-1 md:row-span-1 overflow-hidden group relative">
+<img alt="Machining components" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of metal lathe machine working on a part" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrvCbVxmX41SE1JCfT7BRFDddwEtJC1cmuOevhb6ZrpjFD5IzXRjQfXO5cOmOShWiD8cy9yzeJ5Dg_YdvdWMcQvDMGabpq7aVbsb-pWqgXS113Ija5SqAF__pqh4eB9Qmf_Qo8vCNoctCeETUiuen3cyVexLfrUld-axlO_BpKf9tI73A_MP-BJOfBkibG9lSB-DSvikUn3AWJ4cUdsVOnOatosMFeXQaWfkzpK9k4on4JpkeWysz84apFSVo_j4qf6xTxrfFHcEU"/>
+</div>
+<div class="md:col-span-2 md:row-span-1 overflow-hidden group relative">
+<img alt="Industrial Infrastructure" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Complex structural steel fabrication project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8EcfHMnytQQbc9el2SXcs6NK-BfNOuLuNr4JQMn1inWkwuLvLDFw6Z-CC8Tntjv0ITqG4psNFq1x4vbCKFkAu5kM_Jch8nNIg0fPFBabfcykgIczDIxIGtjEUrvjgQ0JKKOXwgLwUBmioL4C2k5B_1O8h2hJpfy3drS6I-5RxrvsgBlK6Frtfx5M-KZem6ZUweyW3jDMhudNAKyRGdAKnKoHU179BD8H56e27Z1tFPGH_4xEQTInHxAo3aCUfm-F5i6Pf52IpJP8"/>
+</div>
+</div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Nachiyar Engineering Works</p>
+<!-- Contact & Map Section -->
+<section class="bg-on-surface text-white py-24" id="contact">
+<div class="px-6 md:px-24 grid md:grid-cols-2 gap-20">
+<div>
+<span class="label-md font-black text-primary-container tracking-widest uppercase block mb-4">Connect With Us</span>
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-8">Start Your <br/> Project</h2>
+<p class="text-surface-container-high mb-12 max-w-md">Available for Industrial &amp; Local Projects. Reach out for technical consultations and quotations.</p>
+<div class="space-y-8">
+<a class="flex items-start gap-6 group" href="tel:9566521104">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-container group-hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-white" data-icon="call">call</span>
+</div>
+<div>
+<span class="block text-xs uppercase tracking-widest font-bold opacity-50 mb-1">Call Representative</span>
+<span class="text-xl font-bold tracking-tight">95665 21104</span>
+</div>
+</a>
+<a class="flex items-start gap-6 group" href="mailto:nachiyarengineering@gmail.com">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-container group-hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-white" data-icon="mail">mail</span>
+</div>
+<div>
+<span class="block text-xs uppercase tracking-widest font-bold opacity-50 mb-1">Email Inquiries</span>
+<span class="text-xl font-bold tracking-tight">nachiyarengineering@gmail.com</span>
+</div>
+</a>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="location_on">location_on</span>
+</div>
+<div>
+<span class="block text-xs uppercase tracking-widest font-bold opacity-50 mb-1">Facility Address</span>
+<span class="text-xl font-bold tracking-tight">D No 6/126D, Thottathu Salaikal,<br/>Pappampatti, Coimbatore.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/5 p-4 rounded-lg">
+<div class="aspect-square w-full bg-surface-container-high/10 relative overflow-hidden">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 grayscale opacity-80 mix-blend-lighten">
+<img alt="Map background" class="w-full h-full object-cover" data-location="Coimbatore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbFb6MZ5I-U7qhyolPnf86JIGFigqc-kgOiOA9WK2s3lssTABK_g0PFiLl9a1ribJ5OwIGTG5XR_Q-JIL1SwHJMKBIHRWQxpFyH6zgSwjh1-V2knE5DuU-ZOdmMuLIUI5ET44Fq9KJ_1XYNIo9RQ7J2pwY-uFvKB8X3SHefeUwAbTMrOoaIpkzEQQ3BmoSLBEKSgaPx8vuS-UDEXnMGNYBu6ZdTiSrA2riwb3-WoSXiGOL04l-SQyHbHdQu4ocCIgAGkB5EGL_n98"/>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
+<span class="material-symbols-outlined text-6xl text-primary-container mb-4" data-icon="push_pin">push_pin</span>
+<p class="text-center font-bold uppercase tracking-[0.2em] text-sm mb-6 px-10">Pappampatti, Coimbatore <br/> Engineering Hub</p>
+<a class="bg-primary-container text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-on-surface transition-colors flex items-center gap-2" href="https://maps.app.goo.gl/2YJkvQUhhpNBDgDg8" target="_blank">
+                                Get Directions
+                                <span class="material-symbols-outlined" data-icon="directions">directions</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-900 dark:bg-black w-full pt-12 pb-8 flex flex-col items-center text-center px-8 border-t-4 border-orange-500">
+<div class="text-orange-500 font-bold mb-4 text-2xl tracking-tighter font-headline">NACHIYAR ENGINEERING WORKS</div>
+<div class="flex gap-6 mb-8">
+<a class="text-zinc-400 font-be-vietnam-pro text-[10px] uppercase tracking-widest hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-400 font-be-vietnam-pro text-[10px] uppercase tracking-widest hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="font-be-vietnam-pro text-[10px] uppercase tracking-widest text-zinc-500 opacity-80">© 2024 Nachiyar Engineering Works. Precision Tectonics Applied.</p>
 </footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/919566521104?text=Hi%2C%20I%20need%20fabrication%20work"
-class="whatsapp" target="_blank">💬</a>
-
-</body>
-</html>
+<!-- WhatsApp Floating Action Button -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end">
+<a class="bg-green-600 text-white p-4 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform animate-bounce-subtle" href="https://wa.me/919566521104?text=Hi%2C%20I%20need%20crusher%20manufacturing%20details." title="WhatsApp Us">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</a>
+</div>
+</body></html>
