@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nachiyar Engineering Works</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{background:#f5f5f5;color:#222}
+
+/* HEADER */
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:#fff;
+}
+
+h1{font-size:3rem;font-weight:700}
+.highlight{color:#f57c00}
+
+.tagline{margin-top:10px;color:#555}
+
+.btn{
+  margin-top:15px;
+  padding:12px 25px;
+  border:2px solid #f57c00;
+  color:#f57c00;
+  text-decoration:none;
+  border-radius:5px;
+  display:inline-block;
+  transition:0.3s;
+}
+.btn:hover{background:#f57c00;color:#fff}
+
+/* SECTION */
+section{padding:60px 20px;text-align:center}
+h2{color:#f57c00;margin-bottom:20px}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card{
+  padding:25px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.card:hover{transform:translateY(-8px)}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+.gallery img{
+  width:100%;
+  border-radius:10px;
+  transition:0.3s;
+}
+.gallery img:hover{transform:scale(1.05)}
+
+/* MAP */
+.map{
+  margin-top:20px;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+/* CONTACT LINKS */
+.contact-links a{
+  display:block;
+  margin:10px;
+  font-size:18px;
+  color:#222;
+  text-decoration:none;
+}
+.contact-links a:hover{
+  color:#f57c00;
+}
+
+/* FOOTER */
+footer{
+  padding:20px;
+  text-align:center;
+  background:#222;
+  color:#fff;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1><span class="highlight">NACHIYAR</span><br>ENGINEERING WORKS</h1>
+  <p class="tagline">Complete Crushing Solutions</p>
+  <a href="#contact" class="btn">Contact Us</a>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <h2>About Us</h2>
+  <p>Nachiyar Engineering Works provides quality welding, fabrication, machine work and erection services with strong work and customer trust.</p>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Welding</div>
+    <div class="card">Fabrication</div>
+    <div class="card">Machine Work</div>
+    <div class="card">Erection Work</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2>Our Works</h2>
+  <div class="gallery">
+    <img src="images/work1.jpg" alt="Work 1">
+    <img src="images/work2.jpg" alt="Work 2">
+    <img src="images/work3.jpg" alt="Work 3">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-links">
+    <a href="tel:9566521104">📞 Call: 95665 21104</a>
+    <a href="mailto:nachiyarengineering@gmail.com">📧 Email: nachiyarengineering@gmail.com</a>
+  </div>
+
+  <p>Available for Industrial & Local Projects</p>
+  <p>D No 6/126D, Thottathu Salaikal, Pappampatti, Coimbatore</p>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=11.0193994,76.966693&z=15&output=embed"
+    width="100%" height="300" style="border:0;"></iframe>
+  </div>
+
+  <a href="https://maps.app.goo.gl/2YJkvQUhhpNBDgDg8" target="_blank" class="btn">
+    Get Directions
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Nachiyar Engineering Works</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919566521104?text=Hi%2C%20I%20need%20fabrication%20work"
+class="whatsapp" target="_blank">💬</a>
+
+</body>
+</html>
